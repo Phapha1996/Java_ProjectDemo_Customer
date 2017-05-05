@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>AddCustomerUIServlet</servlet-name>
+    <servlet-class>web.UI.AddCustomerUIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCustomerServlet</servlet-name>
+    <servlet-class>web.controller.AddCustomerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WatchCustomerServlet</servlet-name>
+    <servlet-class>web.controller.WatchCustomerServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>AddCustomerUIServlet</servlet-name>
+    <url-pattern>/servlet/AddCustomerUIServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCustomerServlet</servlet-name>
+    <url-pattern>/servlet/AddCustomerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WatchCustomerServlet</servlet-name>
+    <url-pattern>/servlet/WatchCustomerServlet</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>CharacterFilter</filter-name>
+  	<filter-class>web.filter.CharacterFilter</filter-class>
+  	<init-param>
+  		<param-name>character</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>CharacterFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+</web-app>

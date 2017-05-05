@@ -1,0 +1,33 @@
+1.搭建开发环境
+
+ 	1.1导入开发包
+ 	mysql驱动
+ 	jstl开发包
+ 	beanutils开发包
+ 	log4j开发包
+ 	
+ 2.建立程序包
+ 	bean
+ 	dao.interface
+ 	dao.implment
+ 	service.interface
+ 	service.implment
+ 	web.controller
+ 	web.UI
+ 	utils
+ 	WEB-INF/jsp
+ 	
+ 3.建立数据库
+ CREATE DATABASE customers;
+ USE customers;
+ CREATE TABLE customer(
+ 	id VARCHAR(40) PRIMARY KEY,
+ 	name VARCHAR(20) NOT NULL,
+ 	gender VARCHAR(4) NOT NULL,
+ 	birthday DATE,
+	cellphone VARCHAR(15) NOT NULL,
+	email VARCHAR(20),
+	preference VARCHAR(200),
+	type VARCHAR(40),
+	description VARCHAR(255)
+ )CHARACTER SET utf8;
